@@ -1,0 +1,81 @@
+
+<html>
+<head>
+    <title>Receiver Register</title>
+    <link href="static/css/style1.css" rel="stylesheet" type="text/css" />
+    <link href="static/css/style2.css" rel="stylesheet" type="text/css" />
+    <style type = "text/css">
+            body{
+                 background: url(static/img/4.jpg) no-repeat;
+                 background-size: cover;
+                }
+                .button {
+                    border-radius: 4px;
+                    background-color: #f4511e;
+                    border: none;
+                    color: #FFFFFF;
+                    text-align: center;
+                    font-size: 28px;
+                    padding: 20px;
+                    width: 200px;
+                    transition: all 0.5s;
+                    cursor: pointer;
+                    margin: 5px;
+                }
+                .nav1{
+                    margin-bottom: 0px;
+                    margin-top: 0px;
+                    margin-left: 0px;
+                    margin-right: 0px;
+                }
+                .button span {
+                    cursor: pointer;
+                    display: inline-block;
+                    position: relative;
+                    transition: 0.5s;
+                }
+
+                .button span:after {
+                    content: '\00bb';
+                    position: absolute;
+                    opacity: 0;
+                    top: 0;
+                    right: -20px;
+                    transition: 0.5s;
+                }
+
+                .button:hover span {
+                    padding-right: 25px;
+                }
+                .button:hover span:after {
+                    opacity: 1;
+                    right: 0;
+                }
+    </style>
+    </head>
+    <body>
+        <form class="" action="{{url_for('success_receiver')}}" method="post" align='center'>
+            <div class="login-box">
+                <h1>Receiver Register</h1>
+                <div class="textbox">
+                    <input type = "textbox"  name="name" placeholder="Name">
+                </div>
+                <div class="textbox">
+                    <input type = "password" name="passw" placeholder="Password">
+                </div>
+                <div class="textbox">
+                    <input type = "textbox" name="city" placeholder="City">
+                </div>
+                <div class="textbox">
+                    <input type = "textbox" name="phone" placeholder="Phone Number">
+                </div>
+                <div class="textbox">
+                    <input type = "textbox" name="blood" placeholder="Blood Group">
+                </div><br/>
+                <ul>
+                    <li><button class="round green">Sign Up<span class="round">That is, if you don't have an account.</span></button></li>
+                </ul>
+            </div>
+        </form>
+    </body>
+</html>

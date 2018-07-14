@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Receiver</title>
+	<style type="text/css">
+		body{
+			background:url('static/img/4.jpg');
+		}
+		input
+		{
+			margin-left: 690px;
+			background-color: #000999;
+			color:#009099;
+			border-radius: 30px;
+			border-color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<br/><br/>
+	<center><h2>Receiver Details</h2></center>
+	<center>
+		<br/>
+		<table border="1" width = "800px">
+            <tr>
+                <th>Name</th>
+                <th>City</th>
+                <th>BloodGroup</th>
+                <th>Phone</th>
+                <th>Delete</th>
+            </tr>
+            {% for row in rows %}
+				<tr>
+					<td><center>{{row['name']}}</center></td>
+					<td><center>{{row['city']}}</center></td>
+					<td><center>{{row['bloodgroup']}}</center></td>
+					<td><center>{{row['phone']}}</center></td>
+					<td><center><a href = "/delrec/{{row['phone']}}"><img src="static/img/delete.png" width = "30px" height="20px"></a></center></td>
+				</tr>
+			{% endfor %}
+		</table>
+	</center>
+
+</body>
+</html>

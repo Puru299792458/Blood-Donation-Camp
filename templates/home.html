@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+
+        body {
+            margin: 0;
+            background: url(static/img/7.jpg);
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        .nav {
+            width: 100%;
+            background: #000000;
+            height: 52px;
+            margin-top: -12px;
+            opacity: 0.8;
+            margin-right: 15px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 70px;
+            left: 147px;
+            opacity:1;
+        }
+
+        ul.bb {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            left: 7px;
+            opacity:0.9;
+        }
+        li {
+            float: left;
+            width:169px;
+            opacity: 0.7;
+        }
+        ul.bb li{
+            position: relative;
+            margin-top: -21px;
+            margin-bottom: 21px;
+            opacity: 0.7;
+            text-align: center;
+            line-height: 31px;
+            background: #000000;
+            height: 40px;
+            left: -6px;
+            right: 0px;
+            font-size: 20px;
+        }
+
+        ul li a{
+            text-decoration: none;
+            color:white;
+            display:block;
+        }
+
+        ul li ul li{
+            display: none;
+        }
+
+        ul li:hover ul li{
+            display: block;
+        }
+
+        a.cls {
+            width: 150px;
+            color: White;
+            display: block;
+            text-decoration: none;
+            font-size: 20px;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: Century;
+            font-weight: bold;
+        }
+        .style0
+        {
+            font-style: normal;
+            font-size: 40px;
+            color: #941414;
+        }
+
+        a:hover {
+            background: #669900;
+            transition: 0.6s;
+        }
+
+        .style2 {
+            font-family: "Lucida Console";
+            margin-top: -218px;
+            margin-left: 791px;
+            font-size: xx-large;
+            }
+
+        .style3 {
+            font-size: xx-large;
+        }
+
+        .myslides {
+            display: none;
+            margin-left: 3%;
+            margin-right: 15px;
+            border-radius: 5px;
+            margin-top: 94px;
+        }
+
+        div {
+            width: 750px;
+            height: 40%;
+            opacity: 1%;
+            margin-top: 15px;
+        }
+
+        img {
+            width: 100%;
+            height: 280pt;
+        }
+
+        .img_size {
+            height: 40pt;
+            width: 100pt;
+            font-color: blue;
+        }
+        .nav2{
+            margin-left: 851px;
+            margin-right: 0px;
+        }
+        .cc{
+            border-radius: 99px;
+        }
+
+    </style>
+</head>
+<body>
+    <p align="center">
+        <span class = "style0"><strong>Blood Donation Camp</strong></span>
+    </p>
+    <form id="form1" runat="server">
+        <div class="nav">
+            <ul>
+
+                <li><a href="/about_blood" class="cls">About</a></li>
+                <li><a href="/admin_login" class="cls">Admin</a></li>
+                <li><a href="/donor" class="cls">Donor</a></li>
+                <li><a href="/receiver" class="cls">Receiver</a></li>
+                <ul>
+
+                </ul>
+            </ul>
+        </div>
+    </form>
+
+    <!-- to display image within div-->
+    <div class="myslides"><img src="static/img/1.jpg" class = "cc"/></a></div>
+    <div class="myslides"><img src="static/img/2.jpg" class = "cc"/></a></div>
+    <div class="myslides"><img src="static/img/3.jpg" class = "cc"/></a></div>
+    <div class="myslides"><img src="static/img/5.jpg" class = "cc"/></a></div>
+
+
+    <!-- java scipt to changing object-->
+    <script type="text/javascript">
+        var slideIndex = 0;
+        carousel();
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("myslides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > x.length)
+                slideIndex = 1;
+            x[slideIndex - 1].style.display = "block";
+            setTimeout(carousel, 5000);
+        }
+    </script>
+
+    <p class="style2" align="center">
+        <font color="black"><strong>Please Donate your Blood....<br/> And save human life.....</strong></font>
+    </p>
+        <ul class = "nav2"><li><a class="cls">Contact Us</a>
+            <ul class = "bb">
+                <li><a href='https://www.linkedin.com/in/puru-jaiswal-b31838165'>Puru Jaiswal</a></li>
+                <li><a href='https://www.linkedin.com/in/dileep-a-s-458aa7141'>Dileep A S</a></li>
+                <li><a href='https://www.linkedin.com/in/ritu-raj-2a269a124'>Ritu Raj</a></li>
+                <li><a href='https://www.linkedin.com/in/mudaseer-ahamed-bb1b45141'>Mudaseer Ahamed</a></li>
+            </ul>
+            </li>
+        </ul>
+    </body>
+</html>

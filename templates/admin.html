@@ -1,0 +1,135 @@
+<html>
+    <head>
+    <title>Admin</title>
+    <link href="static/css/style1.css" rel="stylesheet" type="text/css" />
+    <link href="static/css/style2.css" rel="stylesheet" type="text/css" />
+    <link href="static/css/nav.css" rel="stylesheet" type="text/css" />
+    <style type = "text/css">
+            body{
+                 background: url(static/img/4.jpg) no-repeat;
+                 background-size: cover;
+                }
+                .button {
+                    border-radius: 4px;
+                    background-color: #f4511e;
+                    border: none;
+                    color: #FFFFFF;
+                    text-align: center;
+                    font-size: 28px;
+                    padding: 20px;
+                    width: 200px;
+                    transition: all 0.5s;
+                    cursor: pointer;
+                    margin: 5px;
+                }
+                .nav1{
+                    margin-bottom: 0px;
+                    margin-top: 0px;
+                    margin-left: 0px;
+                    margin-right: 0px;
+                }
+                .button span {
+                    cursor: pointer;
+                    display: inline-block;
+                    position: relative;
+                    transition: 0.5s;
+                }
+                .button span:after {
+                    content: '\00bb';
+                    position: absolute;
+                    opacity: 0;
+                    top: 0;
+                    right: -20px;
+                    transition: 0.5s;
+                }
+                .button:hover span {
+                    padding-right: 25px;
+                }
+
+                .button:hover span:after {
+                    opacity: 1;
+                    right: 0;
+                }
+                .round {
+                    display: block;
+                    position: absolute;
+                    left: 626;
+                    top: 440;
+                    width: 6%;
+                    height: 12%;
+                    padding-top: 30px;
+                    text-decoration: none;
+                    text-align: center;
+                    font-size: 17px;
+                    text-shadow: 0 1px 0 rgba(255,255,255,.7);
+                    letter-spacing: -.065em;
+                    font-family: "Hammersmith One", sans-serif;
+                    -webkit-transition: all .25s ease-in-out;
+                    box-shadow: 2px 2px 7px rgba(0,0,0,.2);
+                    border-radius: 300px;
+                    z-index: 1;
+                    border-width: 4px;
+                    border-style: solid;
+                    }
+
+                .round:hover {
+                    width: 7%;
+                    height: 14%;
+                    left: 626;
+                    top: 440;
+                    font-size: 19px;
+                    padding-top: 38px;
+                    -webkit-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+                    z-index: 2;
+                    border-size: 10px;
+                    -webkit-transform: rotate(-360deg);
+                }
+
+                    .aaaa{
+                        margin-top: 0px;
+                        margin-left: 0px;
+                    }
+
+
+
+
+                    
+
+        </style>
+    </head>
+    <body>
+
+
+    <form id="form1" runat="server">
+        <div class="nav">
+            <ul>
+
+                <li><a href="/about_blood" class="cls">About</a></li>
+                <li><a href="/admin_login" class="cls">Admin</a></li>
+                <li><a href="/donor" class="cls">Donor</a></li>
+                <li><a href="/receiver" class="cls">Receiver</a></li>
+                <ul>
+
+                </ul>
+            </ul>
+        </div>
+    </form>
+
+        <form class="" action="{{url_for('admin_detail')}}" method="post" align='center'>
+            <div class="login-box">
+                <h1>Admin Login</h1>
+                <div class="textbox">
+                    <input type = "textbox" placeholder="Admin Name" name='name'>
+                </div>
+                <div class="textbox">
+                    <input type = "password" placeholder="Password" name='passw'>
+                </div>
+                <br/>
+                
+                
+                
+            </div>
+            <div class = "aaaa">    <button class="round green">Login<span class="round">That is, your account.</span></button></div>
+        </form>
+    </body>
+</html>

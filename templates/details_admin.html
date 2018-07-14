@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>select</title>
+	 <style type = "text/css">
+            body{
+                 background: url(static/img/4.jpg) no-repeat;
+                 background-size: cover;
+                }
+
+		.a{
+
+			list-style: none;
+			margin-top: 235px;
+			margin-left: 0px;
+		}
+		.c{
+			width: 171px;
+			height: 58px;
+			font-size: 16px;
+			color: red;
+			border-style: none;
+			background-color: #000033;
+			opacity: 0.6;
+			border-radius: 29.6%;
+		}
+
+
+	</style>
+</head>
+<body>
+		<form class="" action="{{url_for('donor_details')}}" method="post">
+            <div class = "a">
+    			<center>
+    				<table border="0" >
+    					<tr>
+    						<td><input type="submit" value="Donor" class = "c"></td>
+    						<td width = "200px"></td>
+    					</tr>
+    				</table>
+    			</center>
+    		</div>
+        </form>
+        <form class="" action="{{url_for('receiver_details')}}" method="post">
+            <div class = "a">
+    			<center>
+    				<table border="0" >
+    					<tr>
+    						<td><input type="submit" value="Receiver" class = "c"></td>
+    						<td width = "200px"></td>
+    					</tr>
+    				</table>
+    			</center>
+    		</div>
+        </form>
+</body>
+</html>
